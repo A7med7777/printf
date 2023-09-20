@@ -9,13 +9,13 @@
  */
 int print_binary(char *buffer, unsigned int n)
 {
-        int count = 0;
+	int count = 0;
 
-        if (n / 2)
-                count += print_binary(buffer + count, n / 2);
+	if (n / 2)
+		count += print_binary(buffer + count, n / 2);
 
-        buffer[count] = (n % 2) + '0';
-        count++;
+	buffer[count] = (n % 2) + '0';
+	count++;
 
-        return (count);
+	return (count);
 }

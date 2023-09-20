@@ -67,11 +67,11 @@ int _printf(const char *format, ...)
 				case 'd':
 				case 'i':
 					if (length == 1)
-						n = print_unsigned(buffer + count, va_arg(args, long int), flags);
+						n = print_unsigned_int(buffer + count, va_arg(args, long int), flags);
 					else if (length == -1)
-						n = print_unsigned(buffer + count, va_arg(args, int), flags);
+						n = print_unsigned_int(buffer + count, va_arg(args, int), flags);
 					else
-						n = print_unsigned(buffer + count, va_arg(args, int), flags);
+						n = print_unsigned_int(buffer + count, va_arg(args, int), flags);
 					while (n < width)
 					{
 						buffer[count + n] = ' ';
@@ -95,11 +95,11 @@ int _printf(const char *format, ...)
 					break;
 				case 'u':
 					if (length == 1)
-						n = print_unsigned(buffer + count, va_arg(args, long unsigned int), flags);
+						n = print_unsigned_int(buffer + count, va_arg(args, long unsigned int), flags);
 					else if (length == -1)
-						n = print_unsigned(buffer + count, va_arg(args, unsigned int), flags);
+						n = print_unsigned_int(buffer + count, va_arg(args, unsigned int), flags);
 					else
-						n = print_unsigned(buffer + count, va_arg(args, unsigned int), flags);
+						n = print_unsigned_int(buffer + count, va_arg(args, unsigned int), flags);
 					while (n < width)
 					{
 						buffer[count + n] = ' ';

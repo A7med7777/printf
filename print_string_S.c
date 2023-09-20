@@ -9,19 +9,19 @@
  */
 int print_string_S(char *buffer, char *s)
 {
-        int i = 0, count = 0;
+	int i = 0, count = 0;
 
-        if (s == NULL)
-                s = "(null)";
+	if (s == NULL)
+		s = "(null)";
 
-        while (s[i])
-        {
-                if (isprint(s[i]))
-                        buffer[count++] = s[i];
-                else
-                        count += sprintf(buffer + count, "\\x%02X", s[i]);
-                i++;
-        }
+	while (s[i])
+	{
+		if (isprint(s[i]))
+			buffer[count++] = s[i];
+		else
+			count += sprintf(buffer + count, "\\x%02X", s[i]);
+		i++;
+	}
 
-        return (count);
+	return (count);
 }
